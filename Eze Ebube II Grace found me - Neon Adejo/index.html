@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text and Audio Document</title>
+  <style>
+     body {
+        line-height: 1.4;
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      vertical-align: top;
+      padding: 1px;
+    }
+    audio {
+      width: 200px;
+      height: 30px;
+      min-width: 200px;
+    }
+    .audio-title {
+        font-size: 7px;
+        text-align: center;
+        margin-top: 1sspx;
+    }
+    .audio-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .audio-container-left {
+      align-items: flex-start;
+    }
+  </style>
+</head> 
+<body>
+  <h2>JESUS (You Are Able) - Ada Ehi</h2>
+  <div class="audio-container-left"> 
+    <audio controls>
+      <source src="ADA EHI - JESUS (You Are Able).m4a" type="audio/mp4">
+      Your browser does not support the audio element
+    </audio>
+   </div>
+   <br>
+  <table>
+    <tr>
+      <td>
+       <div class="text">
+        <p>More than my mouth can testify</p>
+        <p>More than my mind can comprehend</p>
+        <p>See I've seen the wonders of your grace</p>
+        <p>I'm so sure that this is not the end</p>
+        <br>
+        <p>Oh oh oh oh oh</p>
+        <p>Eze ebube</p>
+        <p>See how far you've brought me</p>
+        <p>Eze ebube</p>
+        <p>I'm so glad you found me worthy</p>
+        <p>I can see</p>
+        <p>I can tell</p>
+        <p>And I know it's your grace</p>
+        <p>All my days I will sing your praise</p>
+        <br>
+        <p>My heart is full of gratitude</p>
+        <p>To you and no one else but you</p>
+        <p>(Thank you Jesus)</p>
+        <p>Lord I'm here only by your grace</p>
+        <p>Thank you Jesus for not giving up on me</p>
+        <br>
+        <p>Grace found me</p>
+        <p>Grace saved me</p> 
+        <p>Grace made me</p>
+        <p>Who I am</p>
+        <p>Grace redeemed me</p>
+        <p>Grace sustains me</p>
+        <p>Grace made me who I am</p>
+        <br>
+        <p>I can see</p>
+        <p>I can tell</p>
+        <p>And I know it's your grace</p>
+        <p>All my days I will sing your praise</p>
+       </div>
+      </td>
+  </table>
+<script>
+  document.querySelectorAll('audio').forEach(audio => {
+    audio.onplay = () => {
+      document.querySelectorAll('audio').forEach(otherAudio => {
+        if (otherAudio !== audio) otherAudio.pause();
+      });
+    };
+  });
+</script>
+</body>
+</html>
